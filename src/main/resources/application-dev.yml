@@ -1,0 +1,27 @@
+# PostgreSQL Database Configuration
+spring:
+  datasource:
+    url: jdbc:postgresql://localhost:5432/your_database_name
+    username: admin
+    password: admin
+    driver-class-name: org.postgresql.Driver
+
+  # Hibernate Configuration
+  jpa:
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.PostgreSQLDialect
+    hibernate:
+      ddl-auto: update
+
+  # Multipart File Configuration
+  servlet:
+    multipart:
+      max-file-size: 10MB
+      max-request-size: 10MB
+      enabled: true
+
+# Logging Configuration
+logging:
+  level:
+    org.springframework.web: DEBUG
