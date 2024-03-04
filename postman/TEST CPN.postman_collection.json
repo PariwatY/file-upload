@@ -1,0 +1,81 @@
+{
+	"info": {
+		"_postman_id": "a4853cdf-96be-401f-b2ed-efc2f4a836f0",
+		"name": "TEST CPN",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "27297205",
+		"_collection_link": "https://universal-resonance-185592.postman.co/workspace/smart_energy~75ea86ab-534f-408a-b66c-5fb4f6a76fc0/collection/27297205-a4853cdf-96be-401f-b2ed-efc2f4a836f0?action=share&source=collection_link&creator=27297205"
+	},
+	"item": [
+		{
+			"name": "upload file",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "multipart/form-data",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "file",
+							"type": "file",
+							"src": "postman-cloud:///1eed92b5-8fbc-4460-aca7-0f829f9178ce"
+						},
+						{
+							"key": "bucketName",
+							"value": "bucket-pek",
+							"type": "text"
+						},
+						{
+							"key": "emailTo",
+							"value": "pariwat.y1107@gmail.com",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:8082/cpn/v1/file/upload",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8082",
+					"path": [
+						"cpn",
+						"v1",
+						"file",
+						"upload"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "test hello",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8082/cpn/v1/file/hello",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8082",
+					"path": [
+						"cpn",
+						"v1",
+						"file",
+						"hello"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
